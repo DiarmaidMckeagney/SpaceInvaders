@@ -20,7 +20,7 @@ public class InvadersApplication extends JFrame implements Runnable, KeyListener
     private Spaceship PlayerShip;
     private boolean inGame;
     private ArrayList<PlayerBullet> bulletList = new ArrayList<PlayerBullet>();
-    private final ImageIcon iconBullet= new ImageIcon(workingDirectory + "/src/week5/bullet.png");
+    private final ImageIcon iconBullet= new ImageIcon(workingDirectory + "/game/images/bullet.png");
     private final Image bulletImage = iconBullet.getImage();
     private int currentScore = 0;
     private int bestScore = 0;
@@ -39,9 +39,9 @@ public class InvadersApplication extends JFrame implements Runnable, KeyListener
         this.setTitle("Space Invaders!");
 
         // load image from disk
-        ImageIcon icon = new ImageIcon(workingDirectory + "/src/week5/alien_ship_1.png");
+        ImageIcon icon = new ImageIcon(workingDirectory + "/game/images/alien_ship_1.png");
         Image alienImage = icon.getImage();
-        ImageIcon icon2 = new ImageIcon(workingDirectory + "/src/week5/alien_ship_2.png");
+        ImageIcon icon2 = new ImageIcon(workingDirectory + "/game/images/alien_ship_2.png");
         Image alienImage2 = icon2.getImage();
 
         // create and initialise some aliens, passing them each the image we have loaded
@@ -54,7 +54,7 @@ public class InvadersApplication extends JFrame implements Runnable, KeyListener
         Alien.setFleetXSpeed(2);
 
         // create and initialise the player's spaceship
-        icon = new ImageIcon(workingDirectory + "/src/week5/player_ship.png");
+        icon = new ImageIcon(workingDirectory + "/game/images/player_ship.png");
         Image shipImage = icon.getImage();
         PlayerShip = new Spaceship(shipImage);
         PlayerShip.setPosition(300,530);
